@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Register.com</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#">Infasta Task</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="index.html">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="register.html">Signup</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="login.html">Login</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  
+	<div class="container">
+        <h1>Guest registration</h1>
+        <form id="registration-form" action="register.php" method="POST" onsubmit="return validateForm()">
+          <div class="form-group">
+            <label for="tg_fname">First Name:</label>
+            <input type="text" class="form-control" id="tg_fname" placeholder="Enter First name.." name="First Name" required>
+          </div>
+          <div class="form-group">
+            <label for="tg_lname">Last Name:</label>
+            <input type="text" class="form-control" id="tg_lname" placeholder="Enter Last Name.." name="Last Name" required>
+          </div>
+          <div class="form-group">
+            <label for="tg_mobile">Mobile# Number:</label>
+            <input type="text" class="form-control" id="tg_mobile" placeholder="Enter Mobile#." name="Mobile#" required>
+          </div>
+          <div class="form-group">
+            <label for="tg_email">Email ID:</label>
+            <input type="email" class="form-control" id="tg_email" placeholder="Enter Email." name="Email" required>
+          </div>
+          <div class="form-group">
+            <label for="gender">Gender:</label><br>
+            <div class="form-check-inline">
+              <label class="form-check-label">
+                <input type="radio" class="form-check-input" name="gender" value="female" required>Female
+              </label>
+            </div>
+            <div class="form-check-inline">
+              <label class="form-check-label">
+                <input type="radio" class="form-check-input" name="gender" value="male" required>Male
+              </label>
+            </div>
+            <div class="form-check-inline">
+              <label class="form-check-label">
+                <input type="radio" class="form-check-input" name="gender" value="other" required>Other
+              </label>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="tg_birthday">Birthday:</label>
+            <input type="date" class="form-control" id="tg_birthday" name="birthday" required>
+          </div>
+          <div class="form-group">
+            <label for="psw">Password:</label>
+            <input type="password" class="form-control" placeholder="Enter Password" name="psw" id="psw" required>
+          </div>
+          <div class="form-group">
+            <label for="psw-repeat">Confirm Password:</label>
+            <input type="password" class="form-control" placeholder="Confirm Password" name="psw-repeat" id="psw-repeat" required>
+          </div>
+          <div class="form-group form-check">
+            <label class="form-check-label">
+              <input class="form-check-input" type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
+            </label>
+          </div>
+          <p>By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+        <div id="validation-message"></div>
+        
+      
+ </body>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="validation.js"></script>
+
+</html>
